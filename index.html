@@ -3,44 +3,82 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="vierport" content="width=device-width, initial-scale=1.0">
-	<title> Portofolio </title>
+	<title> Pesut Portofolio </title>
 	<link rel="stylesheet" type="text/css" href="assets/css/header.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/materialize.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-	<nav class="fixed-nav">
-		<div class="nav-wrapper">
-			<!-- Dropdown Button -->
-			<a class='dropdown-trigger hide-on-large-only' href='#' data-target='dropdown1'><i class="material-icons">menu</i></a>
-			<h3 class="brand-logo"> Pesut Project </h3>
-  			<!-- Dropdown Structure -->
-			<ul id='dropdown1' class='dropdown-content'>
-    			<li><a href="#!"> Close </a></li>
-        		<li><a href="#about"> About </a></li>
-    	    	<li><a href="#team"> Team </a></li>
-	        	<li><a href="#portofolio"> Portofolio </a></li>
-        		<li><a href="#contact"> Contact Us </a></li>
-        		<li><a href="login.html"> Sign In </a></li>
-			</ul>
-      		<!-- Navbar Normal -->
-      		<ul id="nav-mobile" class="right hide-on-med-and-down">
-        		<li><a href="#about"> About </a></li>
-        		<li><a href="#team"> Team </a></li>
-        		<li><a href="#portofolio"> Portofolio </a></li>
-        		<li><a href="#contact"> Contact Us </a></li>
-        		<li><a href="login.html"> Sign In </a></li>
-      		</ul>
-    	</div>
-  	</nav>
+  <nav class="fixed-nav">
+    <div class="nav-wrapper">
+      <!-- Dropdown Button -->
+      <a class='dropdown-trigger hide-on-large-only' href='#' data-target='dropdown1'><i class="material-icons">menu</i></a>
+      <h3 class="brand-logo"> Pesut Project </h3>
+        <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!"><i class="material-icons"> close </i> Close </a></li>
+            <li><a href="#about"><i class="material-icons"> person </i> About </a></li>
+            <li><a href="#team"><i class="material-icons"> people_outline </i> Team </a></li>
+            <li><a href="#portofolio"><i class="material-icons"> collections </i> Portofolio </a></li>
+            <li><a href="#contact"><i class="material-icons"> local_phone </i> Contact Us </a></li>
+            <li class="divider"></li>
+            <!-- Modal Trigger -->
+            <li><a class="waves-effect waves-light modal-trigger" href="#modal1"> Sign In </a></li>
+      </ul>
+          <!-- Navbar Normal -->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#about">About </a></li>
+            <li><a href="#team"> Team </a></li>
+            <li><a href="#portofolio"> Portofolio </a></li>
+            <li><a href="#contact"> Contact Us </a></li>
+            <!-- Modal Trigger -->
+            <li><a class="waves-effect waves-light modal-trigger" href="#modal1"> Sign In </a></li>
+          </ul>
+      </div>
+    </nav>
 	<header id="top" class="bgimg">
 		<div class="bg-text">
 			Welcome to My Blog
 		</div>
 	</header>
 	<article>
+  		<!-- Modal Structure -->
+  		<div id="modal1" class="modal">
+    		<div class="modal-header">
+      			<a href="#!" class="modal-close waves-effect waves-green btn-flat right"><i class="material-icons"> close </i> </a>
+    		</div>
+    		<div class="modal-content">
+    			<div class="row">
+    				<h3> Silahkan Login !!! </h3>
+    			</div>
+    			<div class="row">
+    				<form class="col s12" method="POST">
+      					<div class="row">
+       						<div class="input-field col s12">
+       							<i class="material-icons prefix">mail</i>
+          						<input id="login-mail" type="email" class="validate">
+          						<label for="login-mail"> Email </label>
+          						<span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+        					</div>
+       						<div class="input-field col s12">
+       							<i class="material-icons prefix" id="mata" onclick="viewPasswd()">visibility_off</i>
+          						<input id="login-pass" type="password">
+          						<label for="login-pass"> Password </label>
+        					</div>				
+    						<div class="file-field input-field">
+      							<a type="submit" class="btn right" onclick="checkLoginPass()" href="admin/index.html"> Login</a>
+      						</div>
+      					</div>
+    				</form>
+    			</div>
+  			</div>
+  			<div class="modal-footer">
+  				<div id="notification" class="center"></div>
+  			</div>
+  		</div>
 		<div id="about" class="section">
 			<h5> Tentang Kami </h5>
 			<p>
@@ -184,18 +222,16 @@
            	&copy2018 - Ihwan Mualana
        	</div>
 		<div class="thanks"> 
-			Powered by  <a href="https://materializecss.com/"> Materialize.css </a>, <a href="https://necolas.github.io/normalize.css/"> Normalize.css </a> dan <a href="https://daneden.github.io/animate.css/"> Animate.css </a>
+			Dibuat dengan  <a href="https://materializecss.com/"> Materialize.css </a>, <a href="https://necolas.github.io/normalize.css/"> Normalize.css </a> dan <a href="https://daneden.github.io/animate.css/"> Animate.css </a>
 		</div>
     </footer>
 	
 
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.js"></script>
+    <script type="text/javascript" src="assets/js/style.js"></script>
+    <script type="text/javascript" src="assets/js/logic.js"></script>
 
-    <script type="text/javascript">
-    	//DropDown Function 
-    	$('.dropdown-trigger').dropdown();
-    </script>
 </body>
 </html>
 

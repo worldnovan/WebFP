@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="vierport" content="width=device-width, initial-scale=1.0">
+	<title> Admin Panel </title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/header.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body id="admin-container">
+  <nav>
+  	<div class="nav-wrapper">
+      <h4 class="brand-logo"> Admin Panel </h4>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="../index.html" target="blank"> Kunjungi Blog </a></li>
+        <li><a href="#"> Logout </a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="total">
+    <div class="row">
+      <div class="col l3 m6 s12">
+        <div class="border">
+          <h6 class="border"> Hari Ini </h6>
+          <div> 5 </div>
+        </div>
+      </div>
+      <div class="col l3 m6 s12">
+        <div class="border">
+          <h6 class="border"> Minggu Ini </h6>
+          <div> 28 </div>
+        </div>
+      </div>
+      <div class="col l3 m6 s12">
+        <div class="border">
+          <h6 class="border"> Bulan Ini</h6>
+          <div> 72 </div>
+        </div>
+      </div>
+      <div class="col l3 m6 s12">
+        <div class="border">
+          <h6 class="border"> Tahun Ini </h6>
+          <div> 525 </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="diagram">
+    <div class="row">
+      <div class="col l8 m12 s12">
+        <div class="month-chart">
+          <div id="curve-chart"></div>
+          <div id="titik-chart"></div>
+        </div>
+      </div>
+      <div class="col l4 m12 s12">
+        <div class="browser-chart">
+          <div id="pie-chart"></div>  
+          <div id="overview"></div>  
+        </div>        
+      </div>
+    </div>
+  </section>
+
+  <div class="fixed-action-btn">
+		<a class="btn-floating btn-large black">
+      <i class="large material-icons"> menu </i>
+    </a>
+    <ul>
+      <li><a href="index.html" class="btn-floating orange darken-4"><i class="material-icons"> person  </i></a></li>
+      <li><a href="create.html" class="btn-floating yellow darken-4"><i class="material-icons"> edit </i></a></li>
+      <li><a href="content.html" class="btn-floating grey darken-4"><i class="material-icons"> image </i></a></li>
+      <li><a href="message.html" class="btn-floating red darken-4"><i class="material-icons"> question_answer </i></a></li>
+    </ul>
+  </div>
+    
+  <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../assets/js/chart/loader.js"></script>
+  <script type="text/javascript" src="../assets/js/chart/chart.js"></script>
+  <script type="text/javascript" src="../assets/js/style.js"></script>
+</body>
+</html>
